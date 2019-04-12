@@ -1,63 +1,4 @@
-/*Make a wind indicator consisting of a line pointing in the direction the wind is coming from and feathers on the side, for now at 90 degrees. The length of the wind line is 200px and the feather is 75px. 
 
-This js code is a testing code. The basis code is windIndicatorTest.js (without the 2)*/
-/*Mt. Washington observatory latitude and longitude lat = 44.270051, long = -71.303142
-Torrance, CA latitude and longitude lat=33.84&lon=-118.35 http://api.openweathermap.org/data/2.5/weather?lat=33.84&lon=-118.35&appid=bdfc5a0aa4c47697994a10d86e4e2599&units=imperial
-
-cannot use Google API to get latitude and longitude. Need to use IP locator API.*/
-
-/*Get the location of the user using the user's IP address (really gets the location of the users ISP) since GOOGLE won't allow the getPositionOf call without it coming from an HTTPS certified site. Since I won't pay for a certificate and wouldn't know how to use it anyway, the IP address is the alternative.*/
-
-/* V2-4 uses apixu.com key (6/29/2017) = 3237447510b34996b7a30125173006
-   https://api.apixu.com/v1/current.json?key=3237447510b34996b7a30125173006&q=auto:ip (or q=lat,lon [in decimal degrees])
-*/
-
-/*Build the url to call the weather API which is the way to incorporate the latitude and longitude into the url.*/
-
-// var hasLoc = false;
-/* function zipCode() {
-	document.getElementById('weatherBtn').addEventListener("click", function() {
-		var locale = document.getElementById('zipcode').value;
-			console.log('zipcode',locale);
-			if(locale){hasLoc = true;
-			} else hasLoc = false;
-			getWeather(locale);
-	});
-	document.getElementById('zipcode').addEventListener("keyup",function(event) {
-		if (event.keyCode == 13) {
-			var locale = document.getElementById('zipcode').value;
-			console.log('zipcode',locale);
-			if(locale){hasLoc = true;
-			} else hasLoc = false;
-			getWeather(locale);
-		}
-	});
-} */
-/* document.getElementById('click_here').addEventListener('click',function() {
-	var currStatus = document.getElementById('hideshow');
-	console.log(currStatus);
-	var info = document.getElementById('vaneInfo');
-	var inputInfo = document.getElementById('zipMessage');
-	console.log(info);
-	if(currStatus.innerHTML == 'show') {
-		inputInfo.style.display = 'none';
-		info.style.display = 'block';
-		currStatus.innerHTML = 'hide';
-	} else {info.style.display = 'none';
-			inputInfo.style.display = 'block';
-			currStatus.innerHTML = 'show';
-			drawWindIndicator(windSpeed, windDirAng, cloudCover);
-	}
-},false);
-
-document.getElementById('vaneDemo').addEventListener('change',function() {
-	var boxStatus = document.getElementById('vaneDemo').checked;
-	var canvas = document.getElementById('canvas');
-		ctx = canvas.getContext('2d');
-		ctx.clearRect(0, 0, 900, 600);
-	if(boxStatus) {	drawWindIndicator(127,305,75);}
-	if(!boxStatus) {drawWindIndicator(windSpeed, windDirAng, cloudCover);}
-	},false); */
 
 	var hasLoc = false;
 	
@@ -307,3 +248,63 @@ window.addEventListener('load',function() {
 
 
 
+/*Make a wind indicator consisting of a line pointing in the direction the wind is coming from and feathers on the side, for now at 90 degrees. The length of the wind line is 200px and the feather is 75px. 
+
+This js code is a testing code. The basis code is windIndicatorTest.js (without the 2)*/
+/*Mt. Washington observatory latitude and longitude lat = 44.270051, long = -71.303142
+Torrance, CA latitude and longitude lat=33.84&lon=-118.35 http://api.openweathermap.org/data/2.5/weather?lat=33.84&lon=-118.35&appid=bdfc5a0aa4c47697994a10d86e4e2599&units=imperial
+
+cannot use Google API to get latitude and longitude. Need to use IP locator API.*/
+
+/*Get the location of the user using the user's IP address (really gets the location of the users ISP) since GOOGLE won't allow the getPositionOf call without it coming from an HTTPS certified site. Since I won't pay for a certificate and wouldn't know how to use it anyway, the IP address is the alternative.*/
+
+/* V2-4 uses apixu.com key (6/29/2017) = 3237447510b34996b7a30125173006
+   https://api.apixu.com/v1/current.json?key=3237447510b34996b7a30125173006&q=auto:ip (or q=lat,lon [in decimal degrees])
+*/
+
+/*Build the url to call the weather API which is the way to incorporate the latitude and longitude into the url.*/
+
+// var hasLoc = false;
+/* function zipCode() {
+	document.getElementById('weatherBtn').addEventListener("click", function() {
+		var locale = document.getElementById('zipcode').value;
+			console.log('zipcode',locale);
+			if(locale){hasLoc = true;
+			} else hasLoc = false;
+			getWeather(locale);
+	});
+	document.getElementById('zipcode').addEventListener("keyup",function(event) {
+		if (event.keyCode == 13) {
+			var locale = document.getElementById('zipcode').value;
+			console.log('zipcode',locale);
+			if(locale){hasLoc = true;
+			} else hasLoc = false;
+			getWeather(locale);
+		}
+	});
+} */
+/* document.getElementById('click_here').addEventListener('click',function() {
+	var currStatus = document.getElementById('hideshow');
+	console.log(currStatus);
+	var info = document.getElementById('vaneInfo');
+	var inputInfo = document.getElementById('zipMessage');
+	console.log(info);
+	if(currStatus.innerHTML == 'show') {
+		inputInfo.style.display = 'none';
+		info.style.display = 'block';
+		currStatus.innerHTML = 'hide';
+	} else {info.style.display = 'none';
+			inputInfo.style.display = 'block';
+			currStatus.innerHTML = 'show';
+			drawWindIndicator(windSpeed, windDirAng, cloudCover);
+	}
+},false);
+
+document.getElementById('vaneDemo').addEventListener('change',function() {
+	var boxStatus = document.getElementById('vaneDemo').checked;
+	var canvas = document.getElementById('canvas');
+		ctx = canvas.getContext('2d');
+		ctx.clearRect(0, 0, 900, 600);
+	if(boxStatus) {	drawWindIndicator(127,305,75);}
+	if(!boxStatus) {drawWindIndicator(windSpeed, windDirAng, cloudCover);}
+	},false); */

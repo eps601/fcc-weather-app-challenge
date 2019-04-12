@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Local Weather</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="weatherV4.css">
+
+</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3 col-sm-3">
+					<div id="zipMessage">
+						<h5>This application used the server location of your internet service provider for weather in your area.</br></br>For a more precise location (or for any location world-wide), enter any of the following.</h5>
+							<ul>
+								<li>City Name e.g. Augusta defaults to Augusta, Italy but Augusta, Georgia or Augusta, Western Australia will get weather for those locations;</li>
+								<li>UK postcode;</li>
+								<li>Canada postal code;</li>
+								<li>US zip code</li>
+							</ul>
+						<input id="zipcode" type="text" />
+						<button id = "weatherBtn" type = "submit">Submit</button>
+					</div>
+					<div class="col-md-3 col-sm-3">
+					<div id="vaneInfo">
+						<h5>The wind vane:</h5>
+							<ul>
+								<li>shaft points from where the wind is coming</li>
+								<li>flag indicates winds around 50 knots</li>
+								<li>long barb indicates winds around 10 knots</li>
+								<li>short barb indicates winds around 5 knots</li>
+								<li>no barb winds < 3 knots (just the cloud circle)</li>
+							</ul>
+						<h5>Cloud cover</h5>
+							<ul>
+								<li>no shading <15%</li>
+								<li>one quarter shading >15%, <35%</li></li>
+								<li>half shading >35%, <65%</li>
+								<li>three quarters >65%, <85% </li>
+								<li>circle fully shaded >85%</li>
+							</ul>
+						<h5>Example: Just a circle indicates no clouds and calm winds.</h5>
+						<h5>Demonstration: </h5>
+						<input type="checkBox" id="vaneDemo"> Checked box shows winds at 127 knots from NW (305&deg) & 75% clouds</input>
+					</div>
+				</div>
+				</div>
+			
+				<div class="col-md-7 col-sm-7">
+					
+					<h1 id="heading">Weather for <span id="whereAmI"></span></h1>
+					
+					<p> <span id="temperature"></span></p>
+					<img id="weatherIcon" src="" alt=""/>
+					
+					<p> <span id="condition"></span></p>
+					<p id="wind_vane">The wind vane below shows wind speed and direction and cloud conditions. </br><span id="click_para">Click <a href="#" id="click_here">here</a> to <span id="hideshow">show</span> how to read the wind vane.</br>Click on the temperature to change between &degF and &degC.</span></p>
+
+					
+					<canvas id="canvas" width="900" height="600"></canvas>
+				</div>
+			</div>
+			<!-- <div class="row"> -->
+				
+				
+				
+				
+				<div class=" col-md-2 col-sm-2 bkgd3">		
+					
+				</div>
+				
+			<!-- </div> -->
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+				
+		<script src="app.js"></script>
+	</body>
+</html>
